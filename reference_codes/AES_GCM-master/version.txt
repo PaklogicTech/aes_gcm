@@ -1,0 +1,26 @@
+Fri 09 Nov 2018 03:09:08 PM UTC
+1. Features:
+
+	Key_gen module  4-pipelined  critical path 333MHz
+
+    GHash_multiply  1-pipelined                400MHz (approxi.)
+
+    AES_encryption 10-pipelined                500MHz (approxi.)
+
+	Theoretical throughput: 128 * 333 / 1000 = 42.6 Gb/s
+
+	Initial Latency:        15 * 1000 / 333     = 45 ns
+
+
+Sun 11 Nov 2018 07:56:09 PM UTC
+2. Features:
+
+	Key_gen module  8-pipelined                333 * 2MHz (approxi.)
+
+    GHash_multiply  1-pipelined                400MHz (approxi.)
+
+    AES_encryption 10-pipelined  critical path 391MHz 
+
+	Theoretical throughput: 128 * 391 / 1000 = 50.0 Gb/s
+
+	Initial Latency:        15 * 1000 / 391  = 38.3 us

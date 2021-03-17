@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Feb 28 01:32:10 2021
+# Process ID: 17431
+# Current directory: /home/aamir/Desktop/project/verilog/encryption/reference_codes
+# Command line: vivado
+# Log file: /home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.log
+# Journal file: /home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl
+ls
+source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl
+clear
+close_project

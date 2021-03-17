@@ -1,0 +1,176 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:47:09 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 17431
+License: Customer
+
+Current time: 	Sun Feb 28 01:32:29 PKT 2021
+Time zone: 	Pakistan Standard Time (Asia/Karachi)
+
+OS: Ubuntu
+OS Version: 5.8.0-43-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: :0
+Screen size: 1366x768
+Screen resolution (DPI): 73
+Available screens: 1
+Available disk space: 270 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=9
+
+Java version: 	9.0.4 64-bit
+Java home: 	/eda/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4
+Java executable location: 	/eda/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	aamir
+User home directory: /home/aamir
+User working directory: /home/aamir/Desktop/project/verilog/encryption/reference_codes
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /eda/Xilinx/Vivado
+HDI_APPROOT: /eda/Xilinx/Vivado/2019.1
+RDI_DATADIR: /eda/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: /eda/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: /home/aamir/.Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: /home/aamir/.Xilinx/Vivado/2019.1/
+Vivado layouts directory: /home/aamir/.Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	/eda/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.log
+Vivado journal file location: 	/home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-17431-aamir-sahilsemi
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /eda/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@10.2.40.203
+XILINX_DSP: /eda/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: /eda/Xilinx/Vivado/2019.1
+XILINX_SDK: /eda/Xilinx/SDK/2019.1
+XILINX_VIVADO: /eda/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: /eda/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 887 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+// HMemoryUtils.trashcanNow. Engine heap size: 864 MB. GUI used memory: 46 MB. Current time: 2/28/21, 1:32:32 AM PKT
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+setFileChooser("/home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl");
+// Source Tcl File: '/home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl'
+// Tcl Command: 'source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl'
+// by (cl):  Source Tcl Script : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl 
+// Tcl Message: # set_part xc7vx690t-3-ffg1761 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 58 MB (+58402kb) [00:00:21]
+// [Engine Memory]: 939 MB (+832985kb) [00:00:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  1429 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/eda/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: INFO: [Coretcl 2-1500] The part has been set to 'xc7vx690t-3-ffg1761' for the current project only. Run set_part -help for more details. To evaluate different speed grades in the current design, use the set_speed_grade command, or use the open_checkpoint -part command to change the part used by an existing checkpoint design. 
+// Tcl Message: # read_verilog   aes_api.v 
+// Tcl Message: ERROR: [Common 17-69] Command failed: File '/home/aamir/Desktop/project/verilog/encryption/reference_codes/aes_api.v' does not exist 
+// 'cK' command handler elapsed time: 12 seconds
+// [GUI Memory]: 77 MB (+17062kb) [00:00:22]
+// [Engine Memory]: 1,016 MB (+31265kb) [00:00:22]
+dismissDialog("Source Tcl Script"); // by (cl)
+// Elapsed time: 18 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aK (aH, cl)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 405, 66); // dt (af, cl)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aC (Z, cl)
+// Tcl Command: 'ls'
+// [GUI Memory]: 105 MB (+25166kb) [00:00:47]
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: AES_GCM-master AES_GCM-master.zip vivado.jou vivado.log vivado_pid17431.str 
+// Tcl Command: 'rdi::info_commands {so*}'
+// Tcl Command: 'rdi::info_commands {sou*}'
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands {source*}'
+// Elapsed time: 11 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source"); // aC (Z, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // Z (q, cl)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+setFileChooser("/home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl");
+// Source Tcl File: '/home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl'
+// Tcl Command: 'source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl'
+// by (cl):  Source Tcl Script : addNotify
+// Tcl Message: source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl 
+// Tcl Message: # exec xvlog -o output -sv fn_aes_encrypt_stage.sv aes_pipeline_stage1.sv aes_pipeline_stage2.sv aes_pipeline_stage3.sv aes_pipeline_stage4.sv aes_pipeline_stage5.sv aes_pipeline_stage6.sv aes_pipeline_stage7.sv aes_pipeline_stage8.sv gcm_aes.sv testbench.sv 
+// 'cK' command handler elapsed time: 3 seconds
+dismissDialog("Source Tcl Script"); // by (cl)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 178, 88); // dt (af, cl)
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ae (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Tcl Command: 'rdi::info_commands {source*}'
+// Tcl Command: 'rdi::info_commands {cl*}'
+// Tcl Command: 'rdi::info_commands {clea*}'
+// Tcl Command: 'rdi::info_commands {clear*}'
+// Elapsed time: 11 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "clear", true); // aC (Z, cl)
+// Tcl Command: 'clear'
+// Tcl Command: 'clear'
+// Tcl Message: clear 
+// Tcl Message: [H[2J[3J 
+// Tcl Command: 'rdi::info_commands {clo*}'
+// Tcl Command: 'rdi::info_commands {close*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "close", true); // aC (Z, cl)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "close_project"); // aC (Z, cl)
+// Tcl Command: 'close_project'
+// Tcl Command: 'close_project'
+// TclEventType: PROJECT_CLOSE
+// [GUI Memory]: 112 MB (+1470kb) [00:01:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 45 MB. Current time: 2/28/21, 1:34:10 AM PKT
+// Tcl Message: close_project 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,025 MB. GUI used memory: 44 MB. Current time: 2/28/21, 2:04:12 AM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  2841860 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,025 MB. GUI used memory: 44 MB. Current time: 2/28/21, 2:52:07 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,025 MB. GUI used memory: 44 MB. Current time: 2/28/21, 3:28:51 AM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  46446613 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 40 MB. Current time: 2/28/21, 4:49:21 PM PKT

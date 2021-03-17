@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Feb 28 01:32:10 2021
+# Process ID: 17431
+# Current directory: /home/aamir/Desktop/project/verilog/encryption/reference_codes
+# Command line: vivado
+# Log file: /home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.log
+# Journal file: /home/aamir/Desktop/project/verilog/encryption/reference_codes/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/build_project.tcl
+# set_part xc7vx690t-3-ffg1761
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/eda/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Coretcl 2-1500] The part has been set to 'xc7vx690t-3-ffg1761' for the current project only. Run set_part -help for more details. To evaluate different speed grades in the current design, use the set_speed_grade command, or use the open_checkpoint -part command to change the part used by an existing checkpoint design.
+# read_verilog   aes_api.v
+ERROR: [Common 17-69] Command failed: File '/home/aamir/Desktop/project/verilog/encryption/reference_codes/aes_api.v' does not exist
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+AES_GCM-master
+AES_GCM-master.zip
+vivado.jou
+vivado.log
+vivado_pid17431.str
+source /home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl
+# exec xvlog -o output -sv fn_aes_encrypt_stage.sv aes_pipeline_stage1.sv aes_pipeline_stage2.sv aes_pipeline_stage3.sv aes_pipeline_stage4.sv aes_pipeline_stage5.sv aes_pipeline_stage6.sv aes_pipeline_stage7.sv aes_pipeline_stage8.sv gcm_aes.sv testbench.sv
+ERROR: [XSIM 43-3218] unrecognised option '-o', Please see the usage below.
+Usage: xvlog [options] file...
+(Switches with double dash '--' can also be used with a single dash '-')
+
+Vivado Simulator xvlog options:
+  -f [ --file ] arg          Read additional options from the specified file
+  -h [ --help ]              Print this help message
+  --version                  Print the compiler version
+  --initfile arg             Use user defined simulator init file to add to or 
+                             override the settings provided by the default 
+                             xsim.ini file
+  -L [ --lib ] arg           Specify search libraries for the instantiated 
+                             design units in a Verilog or Mixed language 
+                             design. Use -L|--lib for each search library. The 
+                             format of the argument is <name>[=<dir>] where 
+                             <name> is the logical name of the library and 
+                             <dir> is an optional physical directory of the 
+                             library
+  --nolog                    Suppress log file generation
+  --log arg                  Specify the log file name. Default is <application
+                             name>.log
+  --prj arg                  Specify Vivado Simulator  project file containing 
+                             one or more entries of 'vhdl|verilog <work lib> 
+                             <HDL file name>'
+  --relax                    Relax strict HDL language checking rules
+  -v [ --verbose ] arg       Specify verbosity level for printing messages. 
+                             Allowed values are: 0, 1, 2 (Default:0)
+  --incr                     Enable incremental parsing and compilation check 
+                             point
+  --nosignalhandlers         Run with no XSim specific signal handlers. 
+                             Necessary when 3rd party software such as 
+                             antivirus, firewall is generating signals as part 
+                             of its normal usage, causing XSim Compiler and 
+                             Kernel executables to trap these signals and 
+                             report a crash.
+  -i [ --include ] arg       Specify directories to be searched for files 
+                             included using Verilog `include. Use -i|--include 
+                             for each specified search directory
+  -d [ --define ] arg        Define Verilog macros. Use -d|--define for each 
+                             Verilog macro. The format of the macro is 
+                             <name>[=<val>] where <name> is name of the macro 
+                             and <value> is an optional value of the macro
+  --sourcelibdir arg         Directory for Verilog source files of uncompiled 
+                             modules. Use -sourcelibdir|--sourcelibdir 
+                             <dirname> for each source directory.
+  --sourcelibext arg         File extension for Verilog source files of 
+                             uncompiled modules. Use -sourcelibext|--sourcelibe
+                             xt <file extension> for source file extension.
+  --sourcelibfile arg        Filename of a Verilog source file which has 
+                             uncompiled modules. Use -sourcelibfile|--sourcelib
+                             file <filename>.
+  --noname_unnamed_generate  Generate name for an unnamed generate block
+  --work arg                 Specify the work library. The format of the 
+                             argument is <name>[=<dir>] where <name> is the 
+                             logical name of the library and <dir> is an 
+                             optional physical directory of the library
+  --encryptdumps             Encrypt parse dump of design units
+  --sv                       Compile input files in System Verilog mode
+
+Examples:
+  xvlog file1.v file2.v
+  xvlog -work worklib file1.v file2.v
+  xvlog -prj files.prj
+child process exited abnormally
+    while executing
+"exec xvlog -o output -sv fn_aes_encrypt_stage.sv aes_pipeline_stage1.sv aes_pipeline_stage2.sv aes_pipeline_stage3.sv aes_pipeline_stage4.sv aes_pipel..."
+    (file "/home/aamir/Desktop/project/verilog/encryption/reference_codes/AES_GCM-master/compile.tcl" line 1)
+clear
+WARNING: [Common 17-259] Unknown Tcl command 'clear' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+[H[2J[3J
+close_project

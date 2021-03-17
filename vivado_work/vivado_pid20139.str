@@ -1,0 +1,965 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:47:09 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 20139
+License: Customer
+
+Current time: 	Sun Mar 14 18:24:56 PKT 2021
+Time zone: 	Pakistan Standard Time (Asia/Karachi)
+
+OS: Ubuntu
+OS Version: 5.8.0-44-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: :0
+Screen size: 1366x768
+Screen resolution (DPI): 73
+Available screens: 1
+Available disk space: 269 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=9
+
+Java version: 	9.0.4 64-bit
+Java home: 	/eda/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4
+Java executable location: 	/eda/Xilinx/Vivado/2019.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	aamir
+User home directory: /home/aamir
+User working directory: /home/aamir/Desktop/project/verilog/encryption/vivado_work
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /eda/Xilinx/Vivado
+HDI_APPROOT: /eda/Xilinx/Vivado/2019.1
+RDI_DATADIR: /eda/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: /eda/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: /home/aamir/.Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: /home/aamir/.Xilinx/Vivado/2019.1/
+Vivado layouts directory: /home/aamir/.Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	/eda/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/aamir/Desktop/project/verilog/encryption/vivado_work/vivado.log
+Vivado journal file location: 	/home/aamir/Desktop/project/verilog/encryption/vivado_work/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-20139-aamir-sahilsemi
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /eda/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@10.2.40.203
+XILINX_DSP: /eda/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: /eda/Xilinx/Vivado/2019.1
+XILINX_SDK: /eda/Xilinx/SDK/2019.1
+XILINX_VIVADO: /eda/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: /eda/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 883 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // x (w, cl)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 57 MB (+56964kb) [00:00:12]
+// [Engine Memory]: 886 MB (+777398kb) [00:00:12]
+// [GUI Memory]: 78 MB (+19060kb) [00:00:14]
+// [GUI Memory]: 94 MB (+13159kb) [00:00:14]
+// [GUI Memory]: 110 MB (+11290kb) [00:00:15]
+// f (cl): New Project: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 894 MB. GUI used memory: 44 MB. Current time: 3/14/21, 6:25:01 PM PKT
+selectButton("NEXT", "Next >"); // JButton (j, f)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "aes_128"); // Y (Q, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// by (f):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project aes_128 /home/aamir/Desktop/project/verilog/encryption/vivado_work/aes_128 -part xc7vx485tffg1157-1 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 982 MB (+54811kb) [00:00:32]
+// WARNING: HEventQueue.dispatchEvent() is taking  3420 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/eda/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,006 MB. GUI used memory: 50 MB. Current time: 3/14/21, 6:25:20 PM PKT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 6490.492 ; gain = 46.895 ; free physical = 5914 ; free virtual = 12504 
+selectButton("FINISH", "Finish"); // JButton (j, f)
+// 'g' command handler elapsed time: 23 seconds
+dismissDialog("Create Project"); // by (f)
+dismissDialog("New Project"); // f (cl)
+// [Engine Memory]: 1,059 MB (+29230kb) [00:00:38]
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 12 seconds
+String[] filenames31467 = {"/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v", "/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v", "/home/aamir/Desktop/project/verilog/encryption/rtl/round_function.vh"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/aamir/Desktop/project/verilog/encryption/rtl/round_function.vh 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v /home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,071 MB. GUI used memory: 49 MB. Current time: 3/14/21, 6:25:44 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// PAPropertyPanels.initPanels (aes_round.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 434, 88); // cl (w, cl)
+// [Engine Memory]: 1,117 MB (+4966kb) [00:01:03]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 76 seconds
+selectCodeEditor("aes_round.v", 421, 62); // cl (w, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 290, 63); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,169 MB. GUI used memory: 51 MB. Current time: 3/14/21, 6:30:49 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,185 MB (+12400kb) [00:06:57]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,202 MB. GUI used memory: 51 MB. Current time: 3/14/21, 6:31:54 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 295 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round.v", 272, 69); // cl (w, cl)
+selectCodeEditor("aes_round.v", 300, 160); // cl (w, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 4); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_sbox (aes_sbox.v)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_sbox (aes_sbox.v)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_sbox.v", 408, 50); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 292, 72); // cl (w, cl)
+selectCodeEditor("aes_round.v", 42, 202); // cl (w, cl)
+selectCodeEditor("aes_round.v", 42, 202, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 47 seconds
+selectCodeEditor("aes_round.v", 359, 64); // cl (w, cl)
+selectCodeEditor("aes_round.v", 65, 86); // cl (w, cl)
+selectCodeEditor("aes_round.v", 65, 86, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 65, 98); // cl (w, cl)
+selectCodeEditor("aes_round.v", 65, 98, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 65, 103); // cl (w, cl)
+selectCodeEditor("aes_round.v", 65, 103, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 66, 110); // cl (w, cl)
+selectCodeEditor("aes_round.v", 66, 110, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 67, 137); // cl (w, cl)
+selectCodeEditor("aes_round.v", 67, 137, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, round_function.vh]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, round_function.vh]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("round_function.vh", 458, 58); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,235 MB. GUI used memory: 52 MB. Current time: 3/14/21, 6:34:24 PM PKT
+selectCodeEditor("round_function.vh", 84, 92); // cl (w, cl)
+selectCodeEditor("round_function.vh", 84, 92, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,256 MB (+12160kb) [00:10:41]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,256 MB. GUI used memory: 52 MB. Current time: 3/14/21, 6:35:29 PM PKT
+// Elapsed time: 141 seconds
+selectCodeEditor("round_function.vh", 131, 44); // cl (w, cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("round_function.vh", 325, 88); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,288 MB. GUI used memory: 52 MB. Current time: 3/14/21, 6:39:44 PM PKT
+// Elapsed time: 173 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("round_function.vh", 108, 88); // cl (w, cl)
+selectCodeEditor("round_function.vh", 108, 88, false, false, false, false, true); // cl (w, cl) - Double Click
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("round_function.vh", 352, 96); // cl (w, cl)
+// Elapsed time: 100 seconds
+selectCodeEditor("round_function.vh", 393, 95); // cl (w, cl)
+selectCodeEditor("round_function.vh", 159, 59); // cl (w, cl)
+selectCodeEditor("round_function.vh", 159, 59, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("round_function.vh", 17, 86); // cl (w, cl)
+selectCodeEditor("round_function.vh", 17, 86, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("round_function.vh", 284, 91); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("round_function.vh", 308, 72); // cl (w, cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectCodeEditor("aes_sbox.v", 323, 83); // cl (w, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_round.v", 1); // k (j, cl)
+selectCodeEditor("aes_round.v", 393, 154); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 331, 79); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,318 MB. GUI used memory: 53 MB. Current time: 3/14/21, 6:43:49 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,334 MB (+15756kb) [00:19:11]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,350 MB. GUI used memory: 53 MB. Current time: 3/14/21, 6:44:04 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 93 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round.v", 435, 87); // cl (w, cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,383 MB. GUI used memory: 53 MB. Current time: 3/14/21, 6:45:29 PM PKT
+// k (cl): Text Changed: addNotify
+// Elapsed time: 65 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 326, 102); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("aes_round.v", 201, 140); // cl (w, cl)
+selectCodeEditor("aes_round.v", 201, 140, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("aes_round.v", 256, 152); // cl (w, cl)
+selectCodeEditor("aes_round.v", 75, 139); // cl (w, cl)
+selectCodeEditor("aes_round.v", 75, 139, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,416 MB (+16639kb) [00:22:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,416 MB. GUI used memory: 54 MB. Current time: 3/14/21, 6:47:34 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,449 MB. GUI used memory: 54 MB. Current time: 3/14/21, 6:47:59 PM PKT
+// Elapsed time: 110 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round.v", 373, 24); // cl (w, cl)
+// Elapsed time: 61 seconds
+selectCodeEditor("aes_round.v", 211, 159); // cl (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("aes_round.v", 126, 114); // cl (w, cl)
+selectCodeEditor("aes_round.v", 126, 114, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 127 seconds
+selectCodeEditor("aes_round.v", 125, 120); // cl (w, cl)
+// Elapsed time: 74 seconds
+selectCodeEditor("aes_round.v", 273, 188); // cl (w, cl)
+selectCodeEditor("aes_round.v", 66, 192); // cl (w, cl)
+selectCodeEditor("aes_round.v", 66, 192, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 119, 198); // cl (w, cl)
+selectCodeEditor("aes_round.v", 119, 198, false, false, false, false, true); // cl (w, cl) - Double Click
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "24"); // h (f, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near module. [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:24]. ]", 2); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near module. [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:24]. ]", 2, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v;-;;-;16;-;line;-;24;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 332 seconds
+selectCodeEditor("aes_round.v", 239, 97); // cl (w, cl)
+selectCodeEditor("aes_round.v", 89, 96); // cl (w, cl)
+selectCodeEditor("aes_round.v", 89, 96, false, false, false, false, true); // cl (w, cl) - Double Click
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 357, 77); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round.v", 187, 115); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,478 MB. GUI used memory: 54 MB. Current time: 3/14/21, 6:58:59 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 1,494 MB (+6956kb) [00:34:15]
+// Elapsed time: 33 seconds
+selectCodeEditor("aes_round.v", 187, 115); // cl (w, cl)
+selectCodeEditor("aes_round.v", 187, 115, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,510 MB. GUI used memory: 54 MB. Current time: 3/14/21, 6:59:54 PM PKT
+// Elapsed time: 36 seconds
+selectCodeEditor("aes_round.v", 262, 115); // cl (w, cl)
+selectCodeEditor("aes_round.v", 63, 103); // cl (w, cl)
+selectCodeEditor("aes_round.v", 63, 103, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 264, 129); // cl (w, cl)
+selectCodeEditor("aes_round.v", 264, 129, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 79, 101); // cl (w, cl)
+selectCodeEditor("aes_round.v", 79, 101, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 18 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mix_column_state"); // l (aT, cl)
+selectCodeEditor("aes_round.v", 110, 210); // cl (w, cl)
+selectCodeEditor("aes_round.v", 110, 210, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("aes_round.v", 219, 145); // cl (w, cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("aes_round.v", 318, 159); // cl (w, cl)
+selectCodeEditor("aes_round.v", 161, 192); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,538 MB. GUI used memory: 54 MB. Current time: 3/14/21, 7:01:59 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("aes_round.v", 138, 35); // cl (w, cl)
+// [Engine Memory]: 1,571 MB (+2289kb) [00:37:19]
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, round_function.vh]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, round_function.vh]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("round_function.vh", 383, 40); // cl (w, cl)
+// Elapsed time: 69 seconds
+selectCodeEditor("round_function.vh", 373, 76); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_round.v", 1); // k (j, cl)
+// Elapsed time: 15 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cl)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 2); // i (N, cl)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cl)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("aes_round.v", 141, 111); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,592 MB. GUI used memory: 56 MB. Current time: 3/14/21, 7:04:29 PM PKT
+// Elapsed time: 14 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round.v]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 376, 32); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,625 MB. GUI used memory: 56 MB. Current time: 3/14/21, 7:05:04 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,657 MB (+8596kb) [00:40:55]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,673 MB. GUI used memory: 56 MB. Current time: 3/14/21, 7:05:44 PM PKT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 83 seconds
+selectCodeEditor("aes_round.v", 345, 95); // cl (w, cl)
+selectCodeEditor("aes_round.v", 345, 95); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, aes_round.v]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round.v", 227, 37); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectCodeEditor("aes_round.v", 148, 151); // cl (w, cl)
+selectCodeEditor("aes_round.v", 148, 151, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 15 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near wire. [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:44]. ]", 2, true); // ah (O, cl) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near wire. [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:44]. ]", 2, true, false, false, false, false, true); // ah (O, cl) - Double Click - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 51 seconds
+selectCodeEditor("aes_round.v", 405, 53); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,706 MB. GUI used memory: 56 MB. Current time: 3/14/21, 7:08:09 PM PKT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Text Changed"); // k (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, round_function.vh]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, round_function.vh]", 2, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, cl)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, cl)
+// [GUI Memory]: 115 MB (+95kb) [00:44:27]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cl)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// D (cl): Settings: addNotify
+// [Engine Memory]: 1,741 MB (+545kb) [00:44:29]
+// WARNING: HEventQueue.dispatchEvent() is taking  1480 ms.
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // q (a, D)
+// c (D): Select Device: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  3271 ms.
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // i (B, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,854 MB. GUI used memory: 79 MB. Current time: 3/14/21, 7:09:22 PM PKT
+selectTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Artix-7 AC701 Evaluation Platform ; Artix-7 AC701 Evaluation Platform ; xilinx.com ; 1.4 ; xc7a200tfbg676-2 ; 676 ; 1.1 ; 400 ; 134600 ; 269200 ; 365 ; 0 ; 740 ; 8 ; 8 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 10 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 3, "Artix-7 AC701 Evaluation Platform", 0); // d (O, c)
+// [Engine Memory]: 1,855 MB (+28096kb) [00:44:39]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (c)
+dismissDialog("Select Device"); // c (D)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (D)
+// [GUI Memory]: 124 MB (+2875kb) [00:44:43]
+// [GUI Memory]: 143 MB (+13887kb) [00:44:43]
+// by (cl):  Change Settings : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part xilinx.com:ac701:part0:1.4 [current_project] 
+// Tcl Message: INFO: [Project 1-152] Project part set to artix7 (xc7a200tfbg676-2) 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: reset_property board_connections [get_projects aes_128] 
+dismissDialog("Change Settings"); // by (cl)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (D)
+// by (cl):  Change Settings : addNotify
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part xilinx.com:ac701:part0:1.4 [current_project] 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: reset_property board_connections [get_projects aes_128] 
+dismissDialog("Change Settings"); // by (cl)
+dismissDialog("Settings"); // D (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_round (aes_round.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_round (aes_round.v)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("aes_round.v", 266, 209); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,962 MB (+15434kb) [00:45:23]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 85 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round.v", 274, 60); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,950 MB. GUI used memory: 78 MB. Current time: 3/14/21, 7:11:04 PM PKT
+// Elapsed time: 15 seconds
+selectCodeEditor("aes_round.v", 381, 87); // cl (w, cl)
+selectCodeEditor("aes_round.v", 381, 87, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// k (cl): Text Changed: addNotify
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_round (aes_round.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_round (aes_round.v)]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("aes_round.v", 318, 218); // cl (w, cl)
+selectCodeEditor("aes_round.v", 299, 209); // cl (w, cl)
+selectCodeEditor("aes_round.v", 132, 138); // cl (w, cl)
+selectCodeEditor("aes_round.v", 132, 138, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_round.v", 201, 143); // cl (w, cl)
+selectCodeEditor("aes_round.v", 201, 143, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 1336 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+setFileChooser("/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 75 MB. Current time: 3/14/21, 7:34:24 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// k (cl): Text Changed: addNotify
+// Elapsed time: 24 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("aes_data_path.v", 350, 92); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+setFileChooser("/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 13 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,051 MB. GUI used memory: 76 MB. Current time: 3/14/21, 7:35:14 PM PKT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 41 seconds
+selectCodeEditor("aes_data_path.v", 200, 87); // cl (w, cl)
+// [Engine Memory]: 2,067 MB (+7535kb) [01:11:10]
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,083 MB. GUI used memory: 76 MB. Current time: 3/14/21, 7:36:14 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 54 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v), aes_round_0 : aes_round (aes_round.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("aes_data_path.v", 401, 109); // cl (w, cl)
+selectCodeEditor("aes_data_path.v", 82, 116); // cl (w, cl)
+selectCodeEditor("aes_data_path.v", 82, 116, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_data_path.v", 82, 124); // cl (w, cl)
+selectCodeEditor("aes_data_path.v", 82, 124, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("aes_data_path.v", 84, 126); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_data_path.v", 440, 66); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,115 MB. GUI used memory: 76 MB. Current time: 3/14/21, 7:37:34 PM PKT
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round_counter.v]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, aes_round_counter.v]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("aes_round_counter.v", 298, 47); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,148 MB. GUI used memory: 77 MB. Current time: 3/14/21, 7:38:09 PM PKT
+// Elapsed time: 29 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round_counter.v", 402, 108); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round_counter.v", 320, 76); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,180 MB (+9451kb) [01:14:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,180 MB. GUI used memory: 76 MB. Current time: 3/14/21, 7:39:04 PM PKT
+// Elapsed time: 39 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_round_counter.v", 355, 120); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("aes_data_path.v", 270, 36); // cl (w, cl)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// A (cl): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cl)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a200tfbg676-2 Top: aes_data_path 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 77 MB. Current time: 3/14/21, 7:39:24 PM PKT
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 2,496 MB. GUI used memory: 77 MB. Current time: 3/14/21, 7:40:04 PM PKT
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a200tfbg676-2 
+// Tcl Message: Failed to read verilog '/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v' 
+// Tcl Message: 1 Infos, 0 Warnings, 0 Critical Warnings and 20 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// [Engine Memory]: 2,525 MB (+247979kb) [01:15:20]
+// S (cl): Critical Messages: addNotify
+// Elapsed time: 46 seconds
+dismissDialog("Open Elaborated Design"); // by (cl)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-1031] w0 is not declared [/home/aamir/Desktop/project/verilog/encryption/rtl/round_function.vh:35]. ]", 5, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/aamir/Desktop/project/verilog/encryption/rtl/round_function.vh;-;;-;16;-;line;-;35;-;;-;16;-;"); // ah (O, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 52 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("round_function.vh", 345, 109); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 78 MB. Current time: 3/14/21, 7:41:04 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 51 seconds
+selectCodeEditor("round_function.vh", 339, 170); // cl (w, cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("round_function.vh", 496, 77); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// A (cl): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cl)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a200tfbg676-2 Top: aes_data_path 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,569 MB. GUI used memory: 78 MB. Current time: 3/14/21, 7:42:04 PM PKT
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,796 MB. GUI used memory: 78 MB. Current time: 3/14/21, 7:42:09 PM PKT
+// [Engine Memory]: 2,796 MB (+151696kb) [01:17:23]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// [GUI Memory]: 159 MB (+9249kb) [01:17:25]
+// WARNING: HEventQueue.dispatchEvent() is taking  1853 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7936.617 ; gain = 5.922 ; free physical = 5140 ; free virtual = 11988 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_data_path' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  	Parameter NUM_RND bound to: 10 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_round' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (1#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_round' (2#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_round_counter' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] 
+// Tcl Message: 	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'aes_round_counter' (3#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] INFO: [Synth 8-6155] done synthesizing module 'aes_data_path' (4#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7963.586 ; gain = 32.891 ; free physical = 5164 ; free virtual = 12013 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7981.398 ; gain = 50.703 ; free physical = 5163 ; free virtual = 12012 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7981.398 ; gain = 50.703 ; free physical = 5163 ; free virtual = 12012 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8164.117 ; gain = 0.000 ; free physical = 5060 ; free virtual = 11923 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 8225.113 ; gain = 294.418 ; free physical = 4950 ; free virtual = 11819 
+// Tcl Message: 12 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 8225.113 ; gain = 294.418 ; free physical = 4950 ; free virtual = 11819 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+dismissDialog("Open Elaborated Design"); // by (cl)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aH, cl)
+// PAPropertyPanels.initPanels (genblk1[0].inst_aes_round (aes_round)) elapsed time: 0.3s
+// [GUI Memory]: 170 MB (+2993kb) [01:17:46]
+// Schematic: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 62 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cl)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// A (cl): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Close : addNotify
+dismissDialog("Confirm Close"); // A (cl)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,825 MB. GUI used memory: 107 MB. Current time: 3/14/21, 7:43:20 PM PKT
+// Engine heap size: 2,825 MB. GUI used memory: 107 MB. Current time: 3/14/21, 7:43:20 PM PKT
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // by (cl)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("aes_data_path.v", 299, 94); // cl (w, cl)
+// k (cl): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, cl)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_data_path (aes_data_path.v), genblk1[1].inst_aes_round : aes_round (aes_round.v)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// A (cl): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // A (cl)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a200tfbg676-2 Top: aes_data_path 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,896 MB. GUI used memory: 83 MB. Current time: 3/14/21, 7:43:39 PM PKT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,998 MB (+65053kb) [01:18:54]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1118 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8225.113 ; gain = 0.000 ; free physical = 5063 ; free virtual = 11932 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_data_path' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  	Parameter NUM_RND bound to: 10 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_round' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (1#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_round' (2#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] INFO: [Synth 8-6157] synthesizing module 'aes_round_counter' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] 
+// Tcl Message: 	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'aes_round_counter' (3#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] INFO: [Synth 8-6155] done synthesizing module 'aes_data_path' (4#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8225.113 ; gain = 0.000 ; free physical = 5022 ; free virtual = 11901 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8225.113 ; gain = 0.000 ; free physical = 5024 ; free virtual = 11903 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8225.113 ; gain = 0.000 ; free physical = 5024 ; free virtual = 11903 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8249.516 ; gain = 0.000 ; free physical = 4950 ; free virtual = 11827 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8307.547 ; gain = 82.434 ; free physical = 4811 ; free virtual = 11713 
+// Tcl Message: 12 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 8307.547 ; gain = 82.434 ; free physical = 4811 ; free virtual = 11713 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+dismissDialog("Open Elaborated Design"); // by (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 104 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cS, cl)
+// by (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8307.547 ; gain = 0.000 ; free physical = 4847 ; free virtual = 11722 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,005 MB. GUI used memory: 109 MB. Current time: 3/14/21, 7:45:31 PM PKT
+// Engine heap size: 3,005 MB. GUI used memory: 109 MB. Current time: 3/14/21, 7:45:31 PM PKT
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_data_path' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  	Parameter NUM_RND bound to: 10 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_round' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] 
+// Tcl Message: 	Parameter RND_SIZE bound to: 128 - type: integer  	Parameter WRD_SIZE bound to: 32 - type: integer  	Parameter NUM_BLK bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (1#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_sbox.v:27] INFO: [Synth 8-6155] done synthesizing module 'aes_round' (2#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round.v:23] INFO: [Synth 8-6157] synthesizing module 'aes_round_counter' [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] 
+// Tcl Message: 	Parameter MAX_CNT bound to: 10 - type: integer  	Parameter CNT_SIZE bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'aes_round_counter' (3#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_round_counter.v:22] INFO: [Synth 8-6155] done synthesizing module 'aes_data_path' (4#1) [/home/aamir/Desktop/project/verilog/encryption/rtl/aes_data_path.v:22] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8307.547 ; gain = 0.000 ; free physical = 4879 ; free virtual = 11755 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8307.547 ; gain = 0.000 ; free physical = 4881 ; free virtual = 11757 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 8307.547 ; gain = 0.000 ; free physical = 4881 ; free virtual = 11757 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,030 MB. GUI used memory: 84 MB. Current time: 3/14/21, 7:45:32 PM PKT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1615 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 8415.379 ; gain = 107.832 ; free physical = 4889 ; free virtual = 11757 
+dismissDialog("Reloading"); // by (cl)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aH, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 113 MB. Current time: 3/14/21, 7:45:49 PM PKT
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_data_path.v", 2); // k (j, cl)
+// Elapsed time: 1199 seconds
+selectCodeEditor("aes_data_path.v", 470, 118); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+// PAPropertyPanels.initPanels (inst_aes_round_counter (aes_round_counter)) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 116 MB. Current time: 3/14/21, 8:15:49 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 109 MB. Current time: 3/14/21, 10:20:53 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 107 MB. Current time: 3/14/21, 10:50:53 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 147 MB. Current time: 3/15/21, 10:42:05 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,110 MB. GUI used memory: 104 MB. Current time: 3/15/21, 11:12:05 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 107 MB. Current time: 3/15/21, 11:42:05 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 107 MB. Current time: 3/15/21, 12:12:05 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 107 MB. Current time: 3/15/21, 12:42:05 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/15/21, 1:12:05 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 1:42:05 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 2:12:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 2:42:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 3:12:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 3:42:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 4:12:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 4:42:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/15/21, 5:12:06 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 9:05:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 9:35:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 10:05:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 10:35:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 11:05:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 11:35:08 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 12:05:08 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 12:35:08 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 1:05:09 PM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  7702698 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 3:34:10 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 4:04:10 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 4:34:10 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 5:04:10 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 5:34:11 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 6:04:11 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 6:34:11 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 7:27:55 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 7:57:56 PM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  3256742 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 9:02:07 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 9:32:07 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 10:02:07 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 10:32:07 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/16/21, 11:02:07 PM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  37504545 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 9:54:31 AM PKT
+// Elapsed time: 223161 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 113 MB. Current time: 3/17/21, 10:24:31 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 113 MB. Current time: 3/17/21, 10:54:32 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 11:24:32 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 11:54:32 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 12:24:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 12:54:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 1:24:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 1:54:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 2:24:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 2:54:32 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 3:24:33 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 3:54:33 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 4:24:33 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 4:54:33 PM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 108 MB. Current time: 3/17/21, 5:24:33 PM PKT
+// WARNING: HEventQueue.dispatchEvent() is taking  14720839 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,111 MB. GUI used memory: 104 MB. Current time: 3/17/21, 9:44:08 PM PKT

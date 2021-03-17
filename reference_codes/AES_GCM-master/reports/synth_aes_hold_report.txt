@@ -1,0 +1,33 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
+| Date         : Thu Mar 28 12:00:03 2019
+| Host         : cyclops running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -hold -file ./reports/synth_aes_hold_report.txt
+| Design       : aes_api
+| Device       : 7vx690t-ffg1761
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 gcm_aes_instance/stage6/r_key_schedule_reg[1280]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            gcm_aes_instance/stage7p/r_key_schedule_reg[1280]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.199ns  (logic 0.093ns (46.828%)  route 0.106ns (53.172%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  gcm_aes_instance/stage6/r_key_schedule_reg[1280]__0/C
+                         FDRE (Prop_fdre_C_Q)         0.093     0.093 r  gcm_aes_instance/stage6/r_key_schedule_reg[1280]__0/Q
+                         net (fo=2, unplaced)         0.106     0.199    gcm_aes_instance/stage7p/D[127]
+                         FDRE                                         r  gcm_aes_instance/stage7p/r_key_schedule_reg[1280]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
