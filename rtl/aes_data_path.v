@@ -43,9 +43,11 @@ module aes_data_path #(parameter
   wire                o_flag                 ;
   wire [CNT_SIZE-1:0] o_count                ;
   wire [RND_SIZE-1:0] rnd_text_blk[NUM_RND:0];
+  wire [RND_SIZE-1:0] rnd_key_blk [NUM_RND:0];
 
 
   assign rnd_text_blk[0] = i_rnd_text ;
+  assign rnd_key_blk[0]  = i_rnd_key  ;
 /**********************************************************************
 * Round counter module instantiation
 **********************************************************************/
@@ -59,6 +61,24 @@ module aes_data_path #(parameter
     .o_flag  (o_flag ), // output                    o_flag  ,
     .o_count (o_count)  // output reg [CNT_SIZE-1:0] o_count
   );
+
+/**********************************************************************
+* key expension Module
+**********************************************************************/
+  genvar KEY_SCHDL;
+
+  generate
+    for (KEY_SCHDL = 0; KEY_SCHDL < NUM_RND; KEY_SCHDL=KEY_SCHDL+1) begin
+      /* code */
+      aes_key_gen i_aes_key_gen (
+        .pre_rnd_key (rnd_key_blk[i]  ), // input  [127:0] pre_rnd_key ,
+        .i_en_key_gen(i_dp_en         ), // input          i_en_key_gen,
+        .round_num   (o_count         ), // input  [  3:0] round_num   ,
+        .next_rnd_key(rnd_key_blk[i+1])  // output [127:0] next_rnd_key
+      );
+
+    end
+  endgenerate
 /**********************************************************************
 * Round Module Instantiation
 **********************************************************************/
@@ -70,15 +90,15 @@ module aes_data_path #(parameter
         .RND_SIZE(RND_SIZE),
         .WRD_SIZE(WRD_SIZE),
         .NUM_BLK (NUM_BLK )
-      ) inst_aes_round(
+      ) inst_aes_round (
         // inputs
-        .clk       (clk         ),         // input                 clk       ,
-        .rst_n     (rst_n       ),         // input                 rst_n     ,
-        .i_rnd_text(rnd_text_blk[RND_CNT]),// input  [RND_SIZE-1:0] i_rnd_text,
-        .i_rnd_key (i_rnd_key   [RND_CNT]),         // input  [RND_SIZE-1:0] i_rnd_key ,
-        .i_lst_rnd (o_flag      ),         // input                 i_lst_rnd ,
+        .clk       (clk                    ), // input                 clk       ,
+        .rst_n     (rst_n                  ), // input                 rst_n     ,
+        .i_rnd_text(rnd_text_blk[RND_CNT]  ), // input  [RND_SIZE-1:0] i_rnd_text,
+        .i_rnd_key (rnd_key_blk   [RND_CNT]), // input  [RND_SIZE-1:0] i_rnd_key ,
+        .i_lst_rnd (o_flag                 ), // input                 i_lst_rnd ,
         // outputs
-        .o_rnd_key(rnd_text_blk[RND_CNT+1])// output [RND_SIZE-1:0] o_rnd_key
+        .o_rnd_key (rnd_text_blk[RND_CNT+1])  // output [RND_SIZE-1:0] o_rnd_key
       );
     end
   endgenerate
