@@ -71,10 +71,10 @@ module aes_data_path #(parameter
     for (KEY_SCHDL = 0; KEY_SCHDL < NUM_RND; KEY_SCHDL=KEY_SCHDL+1) begin
       /* code */
       aes_key_gen i_aes_key_gen (
-        .pre_rnd_key (rnd_key_blk[i]  ), // input  [127:0] pre_rnd_key ,
-        .i_en_key_gen(i_dp_en         ), // input          i_en_key_gen,
-        .round_num   (o_count         ), // input  [  3:0] round_num   ,
-        .next_rnd_key(rnd_key_blk[i+1])  // output [127:0] next_rnd_key
+        .pre_rnd_key (rnd_key_blk[KEY_SCHDL]  ), // input  [127:0] pre_rnd_key ,
+        .i_en_key_gen(i_dp_en                 ), // input          i_en_key_gen,
+        .round_num   (o_count                 ), // input  [  3:0] round_num   ,
+        .next_rnd_key(rnd_key_blk[KEY_SCHDL+1])  // output [127:0] next_rnd_key
       );
 
     end
