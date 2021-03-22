@@ -34,7 +34,7 @@ module aes_core_top #(parameter
 	input  [RND_SIZE-1:0] i_msg   ,
 	input  [RND_SIZE-1:0] i_key   ,
 	output                o_valid ,
-	output [RND_SIZE-1:0] o_cypher
+	output [RND_SIZE-1:0] o_cypher,
 	output                o_ready ,
 	output                busy
 );

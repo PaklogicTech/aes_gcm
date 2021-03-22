@@ -25,9 +25,10 @@ module aes_control_unit (
 	input      rst_n  , // Asynchronous reset active low
 	input      i_en   ,
 	input      i_flag ,
-	output reg o_ready,
 	output reg o_busy ,
-	output reg o_dp_en
+	output reg o_dp_en,
+  output reg o_ready,
+	output reg o_valid
 );
 
 /**********************************************************************
@@ -76,26 +77,26 @@ module aes_control_unit (
 **********************************************************************/
 	always@(*) begin
 		case (current_state)
-			RESET : begin :
+			RESET : begin 
 				o_ready = 1'b1;
 				o_busy  = 1'b0;
 				o_dp_en = 1'b0;
 				o_valid = 1'b0;
 			end
-			WAIT : begin :
+			WAIT : begin 
 				o_ready = 1'b1;
 				o_busy  = 1'b0;
 				o_dp_en = 1'b0;
 				o_valid = 1'b0;
 			end
 
-			BUSY : begin :
+			BUSY : begin 
 				o_ready = 1'b0;
 				o_busy  = 1'b1;
 				o_dp_en = 1'b0;
 				o_valid = 1'b0;
 			end
-			DONE : begin :
+			DONE : begin 
 				o_ready = 1'b0;
 				o_busy  = 1'b0;
 				o_dp_en = 1'b0;
