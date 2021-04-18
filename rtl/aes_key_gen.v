@@ -27,20 +27,13 @@ module aes_key_gen (
 );
 
   reg  [31:0] rcon         ;
-  wire [31:0] rot_word     ;
-  wire [31:0] sub_word     ;
+  wire [31:0] rot_word;
+  wire [31:0] sub_word;
   wire [31:0] xor_word[3:0];
 
 /* Step 1: Apply RotWord transformation */
-  assign rot_word = { pre_rnd_key[23:0], pre_rnd_key[31:24] };
+  assign rot_word  = { pre_rnd_key[23:0], pre_rnd_key[31:24] };
 
-/* Step 3: XOR */
-  assign xor_word[3] = pre_rnd_key[127:96] ^ sub_word ^ rcon;
-  assign xor_word[2] = pre_rnd_key[95:64]  ^ xor_word[3];
-  assign xor_word[1] = pre_rnd_key[63:32]  ^ xor_word[2];
-  assign xor_word[0] = pre_rnd_key[31:0]   ^ xor_word[1];
-
-  assign next_rnd_key = i_en_key_gen ? { xor_word[3], xor_word[2], xor_word[1], xor_word[0] } : pre_rnd_key;
 
 /* Lookup table for round constant (RCON) */
   always @ (round_num)
@@ -62,15 +55,17 @@ module aes_key_gen (
 
 /* Step 2. Apply SubBytes transformation */
 /* Instantiate 4 aes_sbox units */
-  genvar i;
-  generate
-    for (i=0; i<4; i=i+1)
-      begin: GEN_SBOX
         aes_sbox sbox(
-          .i_wrd_sbox(rot_word[8*i +: 8]),
-          .o_wrd_sbox(sub_word[8*i +: 8])
+          .i_wrd_sbox(rot_word), 
+          .o_wrd_sbox(sub_word)
         );
-      end
-  endgenerate
+
+/* Step 3: XOR */
+  assign xor_word[3] = pre_rnd_key[127:96] ^ sub_word ^ rcon;
+  assign xor_word[2] = pre_rnd_key[95:64]  ^ xor_word[3];
+  assign xor_word[1] = pre_rnd_key[63:32]  ^ xor_word[2];
+  assign xor_word[0] = pre_rnd_key[31:0]   ^ xor_word[1];
+
+  assign next_rnd_key = i_en_key_gen ? { xor_word[3], xor_word[2], xor_word[1], xor_word[0] } : pre_rnd_key;
 
 endmodule

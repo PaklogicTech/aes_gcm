@@ -22,14 +22,22 @@ module tb_aes_key_gen ();
 		.round_num   (round_num   ),
 		.next_rnd_key(next_rnd_key)
 	);
-
+	task run_key_gen();
+		begin
+			pre_rnd_key  = $random();// TODO: ADD as per spects.
+			i_en_key_gen = 'b1;
+			round_num    = $random();
+		end
+	endtask : run_key_gen
 /**********************************************************************
 * Stimulus here
 **********************************************************************/
 	initial
 		begin
-			pre_rnd_key  = 128'd10;// TODO: ADD as per spects.
-			i_en_key_gen = 'b1;
-			round_num    = 'd5;
+			repeat (10)
+				begin
+					run_key_gen();
+					#5;
+				end
 		end
 endmodule
