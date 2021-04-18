@@ -41,6 +41,7 @@ module aes_core_top #(parameter
 
 
 	wire w_dp_en;
+	wire w_flag;
 /**********************************************************************
 * Control Unit instnatiation
 **********************************************************************/
@@ -48,7 +49,7 @@ module aes_core_top #(parameter
 		.clk    (clk    ), //input      clk    ,
 		.rst_n  (rst_n  ), //input      rst_n  ,
 		.i_en   (i_en   ), //input      i_en   ,
-		.i_flag (       ), //input      i_flag ,
+		.i_flag (w_flag ), //input      i_flag ,
 		.o_ready(o_ready), //output reg o_ready,
 		.o_busy (busy   ), //output reg o_busy ,
 		.o_dp_en(w_dp_en), //output reg o_dp_en
@@ -74,7 +75,8 @@ module aes_core_top #(parameter
 		.i_rnd_text   (i_msg   ), // input  [RND_SIZE-1:0] i_rnd_text   ,
 		.i_rnd_key    (i_key   ), // input  [RND_SIZE-1:0] i_rnd_key    ,
 		// outputs
-		.o_cypher_text(o_cypher)
+		.o_cypher_text(o_cypher),
+		.o_flag       (w_flag)
 	);
 
 
