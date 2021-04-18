@@ -34,13 +34,13 @@ module aes_data_path #(parameter
   input  [RND_SIZE-1:0] i_rnd_text   ,
   input  [RND_SIZE-1:0] i_rnd_key    ,
   // outputs
-  output [RND_SIZE-1:0] o_cypher_text
+  output [RND_SIZE-1:0] o_cypher_text,
+  output                o_flag                 
 );
 
 /**********************************************************************
 * Internal Signals as wire and registers
 **********************************************************************/
-  wire                o_flag                 ;
   wire [CNT_SIZE-1:0] o_count                ;
   wire [RND_SIZE-1:0] rnd_text_blk[NUM_RND:0];
   wire [RND_SIZE-1:0] rnd_key_blk [NUM_RND:0];
@@ -98,7 +98,7 @@ module aes_data_path #(parameter
         .i_rnd_key (rnd_key_blk   [RND_CNT]), // input  [RND_SIZE-1:0] i_rnd_key ,
         .i_lst_rnd (o_flag                 ), // input                 i_lst_rnd ,
         // outputs
-        .o_rnd_key (rnd_text_blk[RND_CNT+1])  // output [RND_SIZE-1:0] o_rnd_key
+        .o_rnd_cypher (rnd_text_blk[RND_CNT+1])  // output [RND_SIZE-1:0] o_rnd_key
       );
     end
   endgenerate
