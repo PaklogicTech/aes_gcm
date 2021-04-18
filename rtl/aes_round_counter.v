@@ -37,7 +37,7 @@ module aes_round_counter #(parameter
       o_flag  <=  'b0;
     end else begin
       if (o_count==MAX_CNT) begin
-        o_flag <= 'b0;
+        o_flag <= 'b1;
       end
       else begin
         o_count <= o_count + 1;
