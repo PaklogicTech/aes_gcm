@@ -32,7 +32,7 @@ module aes_round #(parameter
   input  [RND_SIZE-1:0] i_rnd_key ,
   input                 i_lst_rnd ,
   // outputs
-  output [RND_SIZE-1:0] o_rnd_key
+  output [RND_SIZE-1:0] o_rnd_cypher
 );
 
  `include "round_function.vh"
@@ -102,5 +102,5 @@ module aes_round #(parameter
       o_rnd_key_reg <= add_rnd_key_state ;
     end
   end
-assign o_rnd_key=o_rnd_key_reg ;
+assign o_rnd_cypher=o_rnd_key_reg ;
 endmodule
