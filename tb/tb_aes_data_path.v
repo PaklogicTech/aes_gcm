@@ -6,7 +6,7 @@ module tb_aes_data_path ();
   localparam RND_SIZE = 128;
   localparam WRD_SIZE = 32 ;
   localparam NUM_BLK  = 4  ;
-  localparam MAX_CNT  = 10 ;
+  localparam MAX_CNT  = 11 ;
   localparam CNT_SIZE = 4  ;
   localparam NUM_RND  = 10 ;
 
@@ -58,6 +58,8 @@ module tb_aes_data_path ();
 
   task reset_dp();
     begin
+      i_rnd_text = 'h0;
+      i_rnd_key  = 'h0;
       i_dp_en    = 'b0;
       rst_n =1'b0;
       repeat (5)
@@ -71,9 +73,9 @@ module tb_aes_data_path ();
 
   task run_dp_test();
     begin
-      i_dp_en    = 'b1;
-      i_rnd_text = $random();
-      i_rnd_key  = $random();
+      i_dp_en    <= 'b1;
+      i_rnd_text <= 'h3243f6a8885a308d313198a2e0370734;
+      i_rnd_key  <= 'h2b7e151628aed2a6abf7158809cf4f3c;    
     end
   endtask
 
@@ -84,6 +86,7 @@ module tb_aes_data_path ();
   initial
     begin
       reset_dp();
+      @(posedge clk);
       run_dp_test();
     end
 

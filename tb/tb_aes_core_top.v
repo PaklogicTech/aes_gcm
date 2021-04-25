@@ -7,7 +7,7 @@ module tb_aes_core_top ();
 	localparam RND_SIZE = 128;
 	localparam WRD_SIZE = 32 ;
 	localparam NUM_BLK  = 4  ;
-	localparam MAX_CNT  = 10 ;
+	localparam MAX_CNT  = 12 ;
 	localparam CNT_SIZE = 4  ;
 	localparam NUM_RND  = 10 ;
 
@@ -78,8 +78,8 @@ module tb_aes_core_top ();
 	task run_aes_test();
 		begin
 			i_en  = 'b1;
-			i_msg = $random();
-			i_key = $random();
+			i_msg = 'h3243f6a8885a308d313198a2e0370734;
+			i_key = 'h2b7e151628aed2a6abf7158809cf4f3c;
 		end
 	endtask
 

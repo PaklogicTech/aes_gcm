@@ -6,6 +6,7 @@ module tb_aes_round ();
 **********************************************************************/
   parameter RND_SIZE = 128;
   parameter WRD_SIZE = 32 ;
+  parameter CNT_SIZE = 4  ;
   parameter NUM_BLK  = 4  ;
 /**********************************************************************
 * Inputs as registers
@@ -14,7 +15,8 @@ module tb_aes_round ();
   reg                rst_n     ;
   reg [RND_SIZE-1:0] i_rnd_text;
   reg [RND_SIZE-1:0] i_rnd_key ;
-  reg                i_lst_rnd ;
+  reg [CNT_SIZE-1:0] i_rnd_cnt ;
+  reg                i_rnd_en  ;
 
 /**********************************************************************
 * output as wires
@@ -26,14 +28,16 @@ module tb_aes_round ();
   aes_round #(
     .RND_SIZE(RND_SIZE),
     .WRD_SIZE(WRD_SIZE),
+    .CNT_SIZE(CNT_SIZE),
     .NUM_BLK (NUM_BLK )
-  ) DUT(
+  ) DUT (
     // inputs
-    .clk       (clk       ),
-    .rst_n     (rst_n     ),
-    .i_rnd_text(i_rnd_text),
-    .i_rnd_key (i_rnd_key ),
-    .i_lst_rnd (i_lst_rnd ),
+    .clk         (clk         ),
+    .rst_n       (rst_n       ),
+    .i_rnd_en    (i_rnd_en    ),
+    .i_rnd_text  (i_rnd_text  ),
+    .i_rnd_key   (i_rnd_key   ),
+    .i_rnd_cnt   (i_rnd_cnt   ),
     // outputs
     .o_rnd_cypher(o_rnd_cypher)
   );
@@ -48,7 +52,8 @@ module tb_aes_round ();
     begin
       i_rnd_text ='h0; //TODO:
       i_rnd_key  ='h0; //TODO:
-      i_lst_rnd  ='b0; //TODO:
+      i_rnd_cnt  ='h0; //TODO:
+      i_rnd_en   ='b0;
       rst_n =1'b0;
       repeat (5)
         begin
@@ -58,12 +63,18 @@ module tb_aes_round ();
       rst_n = 1'b1;
     end
   endtask
-
+  integer i=0;
   task run_round_test();
     begin
-      i_rnd_text = $random(); //TODO:
-      i_rnd_key  = $random(); //TODO:
-      i_lst_rnd  ='b0; //TODO:
+
+      for(i=0; i<2; i=i+1)
+        begin
+          @(posedge clk)
+            i_rnd_en ='b1;
+          i_rnd_cnt  = i;
+          i_rnd_text = (i_rnd_cnt=='h0)?'h3243f6a8885a308d313198a2e0370734:'h193de3bea0f4e22b9ac68d2ae9f84808;
+          i_rnd_key  = (i_rnd_cnt=='h0)?'h2b7e151628aed2a6abf7158809cf4f3c:'ha0fafe1788542cb123a339392a6c7605;
+        end
     end
   endtask
 
@@ -77,3 +88,4 @@ module tb_aes_round ();
       run_round_test();
     end
 endmodule
+

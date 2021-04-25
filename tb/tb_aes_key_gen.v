@@ -6,7 +6,8 @@ module tb_aes_key_gen ();
 	reg [127:0] pre_rnd_key ;
 	reg         i_en_key_gen;
 	reg [  3:0] round_num   ;
-
+	reg         clk         ;
+	reg         rst_n       ;
 /**********************************************************************
 * output as wires
 **********************************************************************/
@@ -17,16 +18,48 @@ module tb_aes_key_gen ();
 **********************************************************************/
 
 	aes_key_gen DUT (
+		.clk         (clk         ),
+		.rst_n       (rst_n       ),
 		.pre_rnd_key (pre_rnd_key ),
 		.i_en_key_gen(i_en_key_gen),
 		.round_num   (round_num   ),
 		.next_rnd_key(next_rnd_key)
 	);
+
+	integer i=0;
+
+	/**********************************************************************
+* Define Clock Cycles
+**********************************************************************/
+
+	localparam CLK_PRD = 10 ;
+	initial    clk     = 'b1;
+	always #((CLK_PRD)/2) clk = ! clk ;
+
+	task reset_key_gen();
+		begin
+			i_en_key_gen  = 'b0;
+			pre_rnd_key   = 'h0;
+			round_num = 'h0;
+			rst_n =1'b0;
+			repeat (5)
+				begin
+					@(posedge clk)
+						rst_n = 1'b0;
+				end
+			rst_n = 1'b1;
+		end
+	endtask
+
 	task run_key_gen();
 		begin
-			pre_rnd_key  = $random();// TODO: ADD as per spects.
-			i_en_key_gen = 'b1;
-			round_num    = $random();
+			for ( i = 0; i < 10; i=i+1)
+				begin
+					@(posedge clk)
+					i_en_key_gen   = 'b1;
+					round_num      =  i;
+					pre_rnd_key    = (i==0)?'h2b7e151628aed2a6abf7158809cf4f3c:next_rnd_key;	
+				end
 		end
 	endtask : run_key_gen
 /**********************************************************************
@@ -34,10 +67,8 @@ module tb_aes_key_gen ();
 **********************************************************************/
 	initial
 		begin
-			repeat (10)
-				begin
-					run_key_gen();
-					#5;
-				end
+			reset_key_gen();
+			@(posedge clk)
+			run_key_gen();
 		end
 endmodule

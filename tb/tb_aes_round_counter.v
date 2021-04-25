@@ -3,7 +3,7 @@ module tb_aes_round_counter ();
 /**********************************************************************
 * parameter Declaration
 **********************************************************************/
-	localparam MAX_CNT  = 10;
+	localparam MAX_CNT  = 11;
 	localparam CNT_SIZE = 4 ;
 /**********************************************************************
 * Inputs as registers
@@ -63,6 +63,7 @@ module tb_aes_round_counter ();
 	initial
 		begin
 			reset_cntr();
+			@(posedge clk);
 			run_cntr_test();
 		end
 endmodule
