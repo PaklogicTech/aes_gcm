@@ -24,7 +24,7 @@ module aes_core_top #(parameter
 	RND_SIZE = 128,
 	WRD_SIZE = 32 ,
 	NUM_BLK  = 4  ,
-	MAX_CNT  = 10 ,
+	MAX_CNT  = 11 ,
 	CNT_SIZE = 4  ,
 	NUM_RND  = 10
 ) (

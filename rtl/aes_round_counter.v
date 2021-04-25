@@ -20,30 +20,32 @@
 //-----------------------------------------------------------------------------
 
 module aes_round_counter #(parameter
-  MAX_CNT  = 10,
+  MAX_CNT  = 11,
   CNT_SIZE = 4
 ) (
   // inputs
   input                     clk     ,
   input                     rst_n   ,
   input                     i_cnt_en,
-  output reg                o_flag  ,
-  output reg [CNT_SIZE-1:0] o_count
+  output                 o_flag  ,
+  output reg    [CNT_SIZE-1:0] o_count
 );
 
   always @(posedge clk or negedge rst_n) begin
     if(~rst_n) begin
       o_count <= {CNT_SIZE{1'b0}};
-      o_flag  <=  'b0;
     end else begin
-      if (o_count==MAX_CNT) begin
-        o_flag <= 'b1;
+      if(i_cnt_en) begin
+        if (o_count==MAX_CNT) begin
+          o_count <= 'h0;
+        end
+        else begin
+          o_count <= o_count + 1;
+        end
       end
-      else begin
-        o_count <= o_count + 1;
-        o_flag  <= 'b0;
-      end
+      else
+        o_count <= 'h0;
     end
   end
-
+  assign o_flag = (o_count=='ha) ? 1'b1: 1'b0 ;
 endmodule

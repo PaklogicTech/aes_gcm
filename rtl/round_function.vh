@@ -32,10 +32,14 @@ function [127 : 0] shiftrows(input [127 : 0] i_shiftrows);
     i_wrd2 = i_shiftrows[ 63 :  32];
     i_wrd3 = i_shiftrows[ 31 :   0];
 
-    o_wrd0 = {i_wrd0[31 : 24], i_wrd1[23 : 16], i_wrd2[15 : 08], i_wrd3[07 : 00]};
-    o_wrd1 = {i_wrd1[31 : 24], i_wrd2[23 : 16], i_wrd3[15 : 08], i_wrd0[07 : 00]};
-    o_wrd2 = {i_wrd2[31 : 24], i_wrd3[23 : 16], i_wrd0[15 : 08], i_wrd1[07 : 00]};
-    o_wrd3 = {i_wrd3[31 : 24], i_wrd0[23 : 16], i_wrd1[15 : 08], i_wrd2[07 : 00]};
+     o_wrd0 = {i_wrd0[31 : 24], i_wrd1[23 : 16], i_wrd2[15 : 08], i_wrd3[07 : 00]};
+     o_wrd1 = {i_wrd1[31 : 24], i_wrd2[23 : 16], i_wrd3[15 : 08], i_wrd0[07 : 00]};
+     o_wrd2 = {i_wrd2[31 : 24], i_wrd3[23 : 16], i_wrd0[15 : 08], i_wrd1[07 : 00]};
+     o_wrd3 = {i_wrd3[31 : 24], i_wrd0[23 : 16], i_wrd1[15 : 08], i_wrd2[07 : 00]};
+      // o_wrd0 = {i_wrd0[31 : 24], i_wrd0[23 : 16], i_wrd0[15 : 08], i_wrd0[07 : 00]};
+      // o_wrd1 = { i_wrd1[23 : 16], i_wrd1[15 : 08], i_wrd1[07 : 00],i_wrd1[31 : 24]};
+      // o_wrd2 = { i_wrd2[23 : 16], i_wrd2[15 : 08], i_wrd2[07 : 00],i_wrd2[31 : 24]};
+      // o_wrd3 = { i_wrd3[23 : 16], i_wrd3[15 : 08], i_wrd3[07 : 00],i_wrd3[31 : 24]};
 
     shiftrows = {o_wrd0, o_wrd1, o_wrd2, o_wrd3};
   end

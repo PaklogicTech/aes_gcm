@@ -23,14 +23,16 @@
 module aes_round #(parameter
   RND_SIZE = 128,
   WRD_SIZE = 32 ,
+  CNT_SIZE = 4  ,
   NUM_BLK  = 4
 ) (
   // inputs
   input                 clk       ,
   input                 rst_n     ,
+  input                 i_rnd_en  ,
   input  [RND_SIZE-1:0] i_rnd_text,
   input  [RND_SIZE-1:0] i_rnd_key ,
-  input                 i_lst_rnd ,
+  input  [CNT_SIZE-1:0] i_rnd_cnt ,
   // outputs
   output [RND_SIZE-1:0] o_rnd_cypher
 );
@@ -60,10 +62,12 @@ module aes_round #(parameter
 /**********************************************************************
 * Internal Round state
 **********************************************************************/
+  wire [RND_SIZE-1:0] sub_bytes        ;
   wire [RND_SIZE-1:0] shiftrows_state  ;
   wire [RND_SIZE-1:0] mix_column_state ;
   wire [RND_SIZE-1:0] add_rnd_key_mux  ;
   wire [RND_SIZE-1:0] add_rnd_key_state;
+  wire [RND_SIZE-1:0] o_rnd_cypher_comb;
 /**********************************************************************
 * output is flopped
 **********************************************************************/
@@ -83,14 +87,15 @@ module aes_round #(parameter
     end
   endgenerate
 
-  assign shiftrows_state = shiftrows({sbox_lkup_blk[3],sbox_lkup_blk[2],sbox_lkup_blk[1],sbox_lkup_blk[0]});
+  assign sub_bytes       = {sbox_lkup_blk[0],sbox_lkup_blk[1],sbox_lkup_blk[2],sbox_lkup_blk[3]};  
+  assign shiftrows_state = shiftrows(sub_bytes);
 // TODOD :add pipeline stag here
-    assign mix_column_state = mixcolumns(shiftrows_state);
+  assign mix_column_state = mixcolumns(shiftrows_state);
 // TODOD :add pipeline stag here
 
-  assign add_rnd_key_mux   = (i_lst_rnd) ? shiftrows_state : mix_column_state;
-  assign add_rnd_key_state = addroundkey(add_rnd_key_mux,{{i_rnd_key_blk[3],i_rnd_key_blk[2],i_rnd_key_blk[1],i_rnd_key_blk[0]}});
-
+  assign add_rnd_key_mux   = (i_rnd_cnt=='ha) ? shiftrows_state : mix_column_state;
+  assign add_rnd_key_state = addroundkey(add_rnd_key_mux,{{i_rnd_key_blk[0],i_rnd_key_blk[1],i_rnd_key_blk[2],i_rnd_key_blk[3]}});
+ assign o_rnd_cypher_comb  = (i_rnd_cnt==0) ? (i_rnd_key ^ i_rnd_text) : add_rnd_key_state ;
 /**********************************************************************
 * output is flopped
 **********************************************************************/
@@ -99,8 +104,11 @@ module aes_round #(parameter
     if(~rst_n) begin
       o_rnd_key_reg <= {RND_SIZE{1'b0}};
     end else begin
-      o_rnd_key_reg <= add_rnd_key_state ;
+      if(i_rnd_en)
+      o_rnd_key_reg <= o_rnd_cypher_comb;
     end
   end
-assign o_rnd_cypher=o_rnd_key_reg ;
+
+  assign o_rnd_cypher=o_rnd_key_reg ;
+//  assign o_rnd_cypher=i_rnd_key ^ i_rnd_text ;
 endmodule
