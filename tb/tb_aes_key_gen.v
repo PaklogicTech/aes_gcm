@@ -3,7 +3,7 @@ module tb_aes_key_gen ();
 /**********************************************************************
 * Inputs as registers
 **********************************************************************/
-	reg [127:0] pre_rnd_key ;
+	wire [127:0] pre_rnd_key ;
 	reg         i_en_key_gen;
 	reg [  3:0] round_num   ;
 	reg         clk         ;
@@ -27,7 +27,7 @@ module tb_aes_key_gen ();
 	);
 
 	integer i=0;
-
+	assign pre_rnd_key    = (i==0)?'h2b7e151628aed2a6abf7158809cf4f3c:next_rnd_key;
 	/**********************************************************************
 * Define Clock Cycles
 **********************************************************************/
@@ -39,7 +39,6 @@ module tb_aes_key_gen ();
 	task reset_key_gen();
 		begin
 			i_en_key_gen  = 'b0;
-			pre_rnd_key   = 'h0;
 			round_num = 'h0;
 			rst_n =1'b0;
 			repeat (5)
@@ -53,12 +52,12 @@ module tb_aes_key_gen ();
 
 	task run_key_gen();
 		begin
-			for ( i = 0; i < 10; i=i+1)
+			for ( i = 0; i < 11; i=i+1)
 				begin
 					@(posedge clk)
 					i_en_key_gen   = 'b1;
 					round_num      =  i;
-					pre_rnd_key    = (i==0)?'h2b7e151628aed2a6abf7158809cf4f3c:next_rnd_key;	
+						
 				end
 		end
 	endtask : run_key_gen
